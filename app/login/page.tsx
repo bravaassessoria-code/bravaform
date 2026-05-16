@@ -31,6 +31,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const supabase = createClient();
@@ -196,7 +197,7 @@ export default function Login() {
           <div style={{ marginBottom: 24 }}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
               <label style={{ fontSize: 12, color: "#9478C0", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>Senha</label>
-              {isLogin && <span style={{ fontSize: 12, color: "#A855F7", cursor: "pointer", fontWeight: 600 }}>Esqueceu?</span>}
+              {isLogin && <a href="/esqueci-senha" style={{ fontSize: 12, color: "#A855F7", cursor: "pointer", fontWeight: 600, textDecoration: "none" }}>Esqueceu?</a>}
             </div>
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="••••••••" style={input}
               onFocus={e => (e.currentTarget.style.borderColor = "#A855F7")}
@@ -242,8 +243,8 @@ export default function Login() {
 
           <p style={{ textAlign: "center", fontSize: 11, color: "#9478C0" + "88", marginTop: 20, lineHeight: 1.6 }}>
             Ao continuar você concorda com nossos{" "}
-            <span style={{ color: "#A855F7", cursor: "pointer" }}>Termos de Uso</span> e{" "}
-            <span style={{ color: "#A855F7", cursor: "pointer" }}>Política de Privacidade</span>
+            <a href="/termos" style={{ color: "#A855F7", textDecoration: "none" }}>Termos de Uso</a> e{" "}
+            <a href="/privacidade" style={{ color: "#A855F7", textDecoration: "none" }}>Política de Privacidade</a>
           </p>
         </div>
       </div>
