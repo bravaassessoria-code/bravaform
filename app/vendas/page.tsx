@@ -368,7 +368,7 @@ export default function Vendas() {
             ))}
           </div>
           <Reveal>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 12 }}>
               {[
                 { icon: IC.zap("#A855F7", 24), title: "Formulário em 5 min" },
                 { icon: IC.filter, title: "Filtros inteligentes" },
