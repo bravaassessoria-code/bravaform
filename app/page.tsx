@@ -18,9 +18,12 @@ const LEADS = [
 
 function Logo() {
   return (
-    <span style={{ fontSize: 20, fontWeight: 900, color: C.white, letterSpacing: "-0.03em" }}>
-      🦎 Brava<span style={{ color: C.purpleLight }}>Form</span>
-    </span>
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <img src="/logo.png" alt="logo" style={{ width: 32, height: 32, borderRadius: "50%", objectFit: "cover" }} />
+      <span style={{ fontSize: 20, fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.03em" }}>
+        Brava<span style={{ color: "#A855F7" }}>Form</span>
+      </span>
+    </div>
   );
 }
 
