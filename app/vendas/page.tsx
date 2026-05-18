@@ -491,10 +491,9 @@ export default function Vendas() {
             </div>
           </Reveal>
 
-          {/* Grid de integrações: 4 colunas em mobile, auto-fit em desktop */}
-          {/* 9 itens: mobile → 4+4+1 → usamos grid com coluna extra no último */}
-          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(4, 1fr)" : "repeat(5, 1fr)", gap: isMobile ? 10 : 14, marginBottom: 40 }}>
-            {integrations.slice(0, 8).map((int, i) => (
+          {/* Grid de integrações: 3 colunas mobile, 5 desktop — todos os 9 no mesmo grid */}
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(3, 1fr)" : "repeat(5, 1fr)", gap: isMobile ? 10 : 14, marginBottom: 40 }}>
+            {integrations.slice(0, 9).map((int, i) => (
               <Reveal key={int.name} delay={i * 60}>
                 <Card3D style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 16, padding: isMobile ? "16px 8px" : "20px 14px", textAlign: "center", cursor: "pointer" }}>
                   <div style={{ display: "flex", justifyContent: "center", marginBottom: 8 }}>{int.icon}</div>
@@ -502,13 +501,6 @@ export default function Vendas() {
                 </Card3D>
               </Reveal>
             ))}
-            {/* Webhooks (último) ocupa 2 colunas para ficar centralizado */}
-            <Reveal delay={8 * 60}>
-              <Card3D style={{ background: C.bgCard, border: `1px solid ${C.accentGold}44`, borderRadius: 16, padding: isMobile ? "16px 8px" : "20px 14px", textAlign: "center", cursor: "pointer", gridColumn: isMobile ? "2 / 4" : "2 / 4" }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 8 }}>{integrations[8].icon}</div>
-                <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 700, color: C.accentGold }}>{integrations[8].name}</div>
-              </Card3D>
-            </Reveal>
           </div>
 
           <Reveal delay={300}>
@@ -582,7 +574,7 @@ export default function Vendas() {
           </Reveal>
 
           {/* Planos: 1 coluna em mobile, 2 em tablet, 4 em desktop */}
-          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: 16, alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(4, 1fr)", gap: 16, alignItems: "start" }}>
             {plans.map((plan, i) => (
               <Reveal key={plan.id} delay={i * 100}>
                 <Card3D style={{ background: plan.highlight ? `linear-gradient(160deg, #1E0845, ${C.bgCard2})` : C.bgCard, border: `2px solid ${plan.highlight ? C.purpleLight : C.border}`, borderRadius: 20, padding: 24, position: "relative", boxShadow: plan.highlight ? `0 0 60px ${C.purple}33` : "none" }}>
