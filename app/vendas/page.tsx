@@ -372,7 +372,7 @@ export default function Vendas() {
                 Funcionalidades
               </div>
               <h2 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 900, color: C.white, margin: 0, letterSpacing: "-0.04em" }}>
-                Simples de usar, Poderoso pra vender,<br />
+                Simples de usar, Poderoso pra vender!<br />
                 <span style={{ color: C.purpleLight }}>mais o diferencial da IA</span>
               </h2>
             </div>
