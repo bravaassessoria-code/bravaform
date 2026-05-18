@@ -504,7 +504,7 @@ export default function Vendas() {
             ))}
             {/* Webhooks (último) ocupa 2 colunas para ficar centralizado */}
             <Reveal delay={8 * 60}>
-              <Card3D style={{ background: C.bgCard, border: `1px solid ${C.accentGold}44`, borderRadius: 16, padding: isMobile ? "16px 8px" : "20px 14px", textAlign: "center", cursor: "pointer", gridColumn: isMobile ? "2 / 4" : "3 / 4" }}>
+              <Card3D style={{ background: C.bgCard, border: `1px solid ${C.accentGold}44`, borderRadius: 16, padding: isMobile ? "16px 8px" : "20px 14px", textAlign: "center", cursor: "pointer", gridColumn: isMobile ? "2 / 4" : "2 / 4" }}>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 8 }}>{integrations[8].icon}</div>
                 <div style={{ fontSize: isMobile ? 11 : 13, fontWeight: 700, color: C.accentGold }}>{integrations[8].name}</div>
               </Card3D>
